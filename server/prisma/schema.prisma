@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String   @id @default(uuid())
+  firebase_user_id String   @unique
+  email            String   @unique
+  name             String
+  avatar           String?  @default("")
+  tier             String   @default("basic")
+  created_at       DateTime @default(now())
+}
+
+model Interview {
+  id                  String   @id @default(uuid())
+  user_id             String
+  interview_name      String
+  num_of_questions    Int      @default(3)
+  interview_type      String
+  company_name        String?
+  company_description String?
+  role                String
+  experience_level    String   @default("fresher")
+  job_description     String?
+  resume_link         String?
+  focus_area          String?
+  questions           Json
+  created_at          DateTime @default(now())
+  reports             Report[] @relation("InterviewReports")
+}
+
+model Report {
+  id                String   @id @default(uuid())
+  interviewId       String
+  userId            String
+  answers           Json
+  finalScore        Float?
+  summary           String?
+  areaOfImprovement String[]
+  strengths         String[]
+  createdAt         DateTime @default(now())
+  interview         Interview @relation("InterviewReports", fields: [interviewId], references: [id])
+}
