@@ -293,6 +293,7 @@
 										id="email"
 										type="email"
 										value={email}
+										autoComplete="email"
 										onChange={(e) =>
 											handleEmailChange(e.target.value)
 										}
@@ -327,6 +328,7 @@
 												showPassword ? "text" : "password"
 											}
 											value={password}
+											autoComplete="new-password"
 											onChange={(e) =>
 												handlePasswordChange(e.target.value)
 											}

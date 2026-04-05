@@ -217,6 +217,7 @@ export default function Login() {
 									id="email"
 									type="email"
 									value={email}
+									autoComplete="email"
 									onChange={(e) =>
 										handleEmailChange(e.target.value)
 									}
@@ -250,6 +251,7 @@ export default function Login() {
 										type={
 											showPassword ? "text" : "password"
 										}
+										autoComplete="current-password"
 										value={password}
 										onChange={(e) =>
 											handlePasswordChange(e.target.value)
