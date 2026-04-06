@@ -266,7 +266,7 @@
 											handleNameChange(e.target.value)
 										}
 										placeholder="Enter your name"
-										className={`w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
+										className={`w-full text-gray-900 bg-white px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
 											validation.name
 										)}`}
 									/>
@@ -298,7 +298,7 @@
 											handleEmailChange(e.target.value)
 										}
 										placeholder="Enter your email"
-										className={`w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
+										className={`w-full text-gray-900 bg-white px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
 											validation.email
 										)}`}
 									/>
@@ -333,7 +333,7 @@
 												handlePasswordChange(e.target.value)
 											}
 											placeholder="Enter your password"
-											className={`w-full px-3 py-2 pr-10 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
+											className={`w-full text-gray-900 bg-white px-3 py-2 pr-10 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none transition-all ${getRingColor(
 												validation.password
 											)}`}
 										/>
